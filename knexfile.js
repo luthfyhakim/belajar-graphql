@@ -6,9 +6,19 @@
 module.exports = {
 
   development: {
-    client: 'sqlite3',
+    client: 'mysql',
     connection: {
-      filename: './dev.sqlite3'
+      host : '127.0.0.1',
+      port : 3300,
+      user : 'root',
+      password : '',
+      database : 'graphql_berita'
+    },
+    migrations: {
+      directory: __dirname + '/app/db/migrations'
+    },
+    seeds: {
+      directory: __dirname + '/app/db/seeds'
     }
   },
 
